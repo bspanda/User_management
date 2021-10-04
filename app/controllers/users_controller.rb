@@ -27,8 +27,7 @@ class UsersController < ApplicationController
   def login
     user_email = params[:email]
     user_pass = params[:password]
-    user = User.where("email = ? and password = ?", user_email, user_pass)
-    user_status = user.empty? ? "false" : "true"
-    render plain: "#{user_status}"
+    user = User.find_by(email: user_email, password: user_pass)
+    render plain: user.present?
   end
 end
