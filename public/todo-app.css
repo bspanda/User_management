@@ -13,13 +13,13 @@ body {
   justify-content: center;
 }
 .TodoPage-title {
-  font-size: 48px;
+  font-size: 20px;
   line-height: 0.5;
   color:#453C52;
 }
 
 .TodoSection-title {
-  font-size: 24px;
+  font-size: 14px;
   line-height: 0.4;
   color:#453C52;
 }
@@ -42,72 +42,96 @@ body {
   color: #453C52;
   border-radius: 4px;
   border: 2px solid #BFB8CC;
+  width: 190px;
+  height: 32px;
+  cursor: pointer;
 }
 
 .AddTodo-date {
   padding: 6px;
   font-size: 14px;
-  color:white;
+  color: #FFFFFF;
   margin-right: 10px;
   margin-left: 10px;
   border-radius: 4px;
   border: 2px solid #BFB8CC;
+  width: 93px;
+  height: 32px;
+  cursor: pointer;
   }
 
 .AddTodo-button {
+  padding: 6px;
   font-size: 14px;
-  color: white;
+  color: #FFFFFF;
   background-color: #48BB78;
-  border: 1px solid transparent;
-  padding: 6px 22px;
+  border: 2px solid #BFB8CC;
   border-radius: 4px;
+  width: 72px;
+  height: 48px;
+  cursor: pointer;
 }
 
 .TodoSection {
-  margin-bottom: 12px;
+  margin-top: 14px;
+  line-height: 5px;
+  margin-bottom: 10px;
 }
 
 .TodoSectionTitle {
+  font-size: 20px;
   display: flex;
   color: #453C52;
   align-items: center;
-  line-height: 1.0px;
+  line-height: 20px;
 }
 
 .TodoSectionTitle-text {
-  font-size: 48px;
   font-weight: 600;
   margin-right: 8px;
   line-height: 1.4;
 }
+
 .TodoSectionTitle-remainingCount {
   margin-left: 8px;
-  font-size: 14px;
+  font-size: 12px;
+  color: #726A7E;
 }
 
-ol, ul {
+.TodoList {
+  margin-top: 2px;
   list-style: none;
+  line-height: 12px;
 }
 
 .TodoItem {
   font-size: 14px;
   margin-left: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   color: #453C52;
 }
 
-.TodoItem-delete > img {
-  width: 16px;
+.TodoItem-container:hover {
+  background-color: lightgray;
+  cursor: pointer;
 }
 
-.TodoItem-delete {
-  margin-left: 8px;
+.TodoItem-DeleteButton {
+  margin-left: 10px;
+  visibility: hidden;
+  cursor: pointer;
 }
+
+.TodoItem-container:hover .TodoItem-DeleteButton {
+  visibility: visible;
+}
+
 .TodoItem-container {
-  margin-left: 24px;
   display: flex;
   padding: 2 px 8 px;
   align-items: center;
+  font-size: 14px;
+  color: #453C52;
 }
 
 .TodoItem-checkbox {
@@ -119,5 +143,5 @@ ol, ul {
 .TodoItem-overduelabel {
   margin-left: 12px;
   font-size: 14px;
-  color: red;
+  color:#C53030;
 }
